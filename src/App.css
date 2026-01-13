@@ -1,0 +1,115 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* CONTAINER */
+.app-container {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url('/bg.png'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* CAIXA DE LOGIN */
+.login-box {
+  width: 100%;
+  max-width: 380px;
+  padding: 40px;
+  
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  
+  text-align: center;
+  
+}
+
+/* INPUT */
+.input-field {
+  position: relative;
+  width: 100%;
+  height: 48px;
+  margin-bottom: 20px;
+}
+
+.input-field input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 30px;
+  padding: 0 45px 0 20px;
+  color: #fff;
+  outline: none;
+}
+
+.input-field .icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+}
+
+/* BOTÃO */
+button[type="submit"] {
+  width: 100%;
+  height: 45px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #38bdf8, #2563eb);
+  
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* DARK MODE */
+body.dark {
+  background-color: #0f172a;
+}
+
+.app-container.dark .login-box {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+/* LIGHT MODE */
+body.light {
+  background-color: #f1f5f9;
+}
+
+.app-container.light .login-box {
+  background: #ffffff;
+  color: #0f172a;
+}
+
+/* BOTÃO TEMA */
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #fff;
+}
+
+body.light .theme-toggle {
+  color: #0f172a;
+}
